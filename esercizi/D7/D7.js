@@ -213,6 +213,7 @@ const movies = [
 */
 function olderFilm(movies) {
   let filmPiuVecchio = movies[0]
+
   movies.forEach((movie) => {
     if (parseInt(movie.Year) < parseInt(filmPiuVecchio.Year)) {
       filmPiuVecchio = movie
@@ -227,10 +228,17 @@ console.log(olderFilm(movies))
 /* ESERCIZIO 10
   Scrivi una funzione per ottenere il numero di film contenuti nell'array fornito.
 */
+const filmNum = movies.length
+console.log(filmNum)
 
 /* ESERCIZIO 11 (map)
   Scrivi una funzione per creare un array con solamente i titoli dei film contenuti nell'array fornito.
 */
+const TitleName = []
+const filmName = movies.map((title) => {
+  TitleName.push(title.Title)
+})
+console.log(TitleName)
 
 /* ESERCIZIO 12 (filter)
   Scrivi una funzione per ottenere dall'array fornito solamente i film usciti nel millennio corrente.
